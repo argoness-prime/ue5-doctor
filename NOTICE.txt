@@ -1,0 +1,13 @@
+Veristrux Inc. — Copyright & Third-Party Trademark Notice
+Copyright (c) 2026 Veristrux Inc. (Delaware Corporation). All Rights Reserved.
+Website: https://veristrux.com | Contact: argoness@veristrux.com
+
+Unreal® and Unreal Engine® are trademarks or registered trademarks of Epic Games, Inc.
+NVIDIA® and DLSS™ are trademarks of NVIDIA Corporation.
+Claude™ and Claude Code™ are trademarks of Anthropic, PBC.
+Google® and Google Antigravity™ are trademarks of Google LLC.
+Cursor™ is a trademark of Anysphere, Inc.
+Polar™, PayPal®, and Stripe® are trademarks of their respective owners.
+
+Veristrux Inc. is an independent software vendor and is not affiliated with, endorsed by,
+or sponsored by any of the foregoing companies.
