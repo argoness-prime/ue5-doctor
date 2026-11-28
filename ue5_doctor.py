@@ -146,19 +146,19 @@ def audit_engine_ini_text(ini_text: str, vram_gb: int = 16, mode: str = "desktop
 
     if mode == "vr90":
         vr_checks = (
-            ("r.VSM.MaxPhysicalPages", "2048", "Bounds Virtual Shadow Map physical page VRAM under stereo instanced rendering."),
+            ("r.Shadow.Virtual.MaxPhysicalPages", "2048", "Bounds Virtual Shadow Map physical page VRAM under stereo instanced rendering."),
             ("r.HairStrands.SkyLighting.IntegrationType", "2", "Cuts strand hair sky-lighting GPU cost in 90Hz stereo."),
             ("r.Lumen.Reflections.Allow", "0", "Disables expensive stereo Lumen ray reflections when hitting strict 11.1 ms 90Hz frame budgets."),
-            ("xr.InstancedStereo", "True", "Ensures single-pass instanced stereo draw submission for OpenXR."),
+            ("vr.InstancedStereo", "True", "Ensures single-pass instanced stereo draw submission for OpenXR."),
         )
         for cvar, target_val, why in vr_checks:
             if kv.get(cvar) != target_val:
                 recommendations.append({"cvar": cvar, "recommended": target_val, "reason": why})
     else:
-        if kv.get("r.VSM.MaxPhysicalPages") is None:
+        if kv.get("r.Shadow.Virtual.MaxPhysicalPages") is None:
             recommendations.append(
                 {
-                    "cvar": "r.VSM.MaxPhysicalPages",
+                    "cvar": "r.Shadow.Virtual.MaxPhysicalPages",
                     "recommended": "4096" if vram_gb >= 16 else "2048",
                     "reason": "Prevents unbounded Virtual Shadow Map page-table growth in dense Nanite levels.",
                 }
@@ -218,10 +218,10 @@ def run_selftest() -> dict[str, Any]:
 
     ini_vr = audit_engine_ini_text("[/Script/Engine.RendererSettings]\nr.Streaming.PoolSize=12000\n", vram_gb=16, mode="vr90")
     checks.append(("vr90_clamps_excessive_pool", any(r["cvar"] == "r.Streaming.PoolSize" for r in ini_vr["recommendations"])))
-    checks.append(("vr90_enforces_instanced_stereo", any(r["cvar"] == "xr.InstancedStereo" for r in ini_vr["recommendations"])))
+    checks.append(("vr90_enforces_instanced_stereo", any(r["cvar"] == "vr.InstancedStereo" for r in ini_vr["recommendations"])))
 
     ini_dt = audit_engine_ini_text("[/Script/Engine.RendererSettings]\n", vram_gb=12, mode="desktop")
-    checks.append(("desktop_recommends_vsm_cap", any(r["cvar"] == "r.VSM.MaxPhysicalPages" for r in ini_dt["recommendations"])))
+    checks.append(("desktop_recommends_vsm_cap", any(r["cvar"] == "r.Shadow.Virtual.MaxPhysicalPages" for r in ini_dt["recommendations"])))
 
     uproj = trim_uproject_data(
         {"Plugins": [{"Name": "OpenImageDenoise", "Enabled": True}, {"Name": "EnhancedInput", "Enabled": True}]}
