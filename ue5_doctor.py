@@ -94,7 +94,10 @@ def triage_log_text(text: str, max_findings: int = 25) -> dict[str, Any]:
             if kind == "msvc_linker":
                 for sym, mod in COMMON_SYMBOL_MODULES.items():
                     if sym in line:
-                        hint = f"Add '{mod}' to PublicDependencyModuleNames in your <Module>.Build.cs."
+                        hint = (
+                            f"Add '{mod}' to PrivateDependencyModuleNames (if referenced only in .cpp) "
+                            f"or PublicDependencyModuleNames (if exposed in Public/ headers) in <Module>.Build.cs."
+                        )
                         if mod not in module_hints:
                             module_hints.append(mod)
                         break
