@@ -23,6 +23,7 @@ python ue5-doctor/ue5_doctor.py trim-uproject MyProject.uproject
 
 ## Companion Unreal Engine 5.8 / 5.9 Systems (`Veristrux Inc.`)
 - **Interactive 6-Wall 29-Prime Laguerre Spatial Fiducial Sandbox:** https://veristrux.com/viewdrift-demo.html
+- **1080p & 9:16 Technical Walkthroughs:** [UE5 UBT `LNK2019`, Dual `audit-ini` & Standalone `-game` Cinema (1080p MP4)](https://veristrux.com/media/wave5/ue59_crash_and_cinema_16x9.mp4) · [9:16 Short](https://veristrux.com/media/wave5/ue59_crash_and_cinema_short.mp4) · [ViewDrift 29-Prime Chamber (1080p MP4)](https://veristrux.com/media/viewdrift_ue59_showcase.mp4)
 - **UE 5.8 / 5.9 Seam (`<= 0.50 mm`) & VRAM Reference Checklist (Gist):** https://gist.github.com/argoness-prime/aeac84fe9a5ffd89dc989143a8e32572
 - **ViewDrift (`/ppd v1.5.0` — UE 5.8/5.9 C++20/RDG Plugin + MCP Save Firewall), UE 5.9 Cinema Capture Kit & 48h UE5 Engineering Rescue:** https://veristrux.com/
 - **License:** MIT License — Copyright (c) 2026 Veristrux Inc. (`argoness@veristrux.com`)
