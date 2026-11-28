@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ue5-doctor": {
+      "command": "python",
+      "args": ["-u", "-m", "ue5_doctor", "mcp"]
+    }
+  }
+}
