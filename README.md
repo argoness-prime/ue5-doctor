@@ -29,6 +29,7 @@ python ue5-doctor/ue5_doctor.py trim-uproject MyProject.uproject
 ```
 
 ## Companion Unreal Engine 5.8 / 5.9 Systems (`Veristrux Inc.`)
+- **Glama MCP Directory:** [![Glama MCP Score](https://glama.ai/mcp/servers/argoness-prime/ue5-doctor/badges/score.svg)](https://glama.ai/mcp/servers/argoness-prime/ue5-doctor)
 - **MCP Registry Identifier:** `mcp-name: io.github.argoness-prime/ue5-doctor`
 - **Interactive Client-Side UE 5.4–5.9 UBT/Cook Triage & Desktop/OpenXR 90 Hz INI Lab (0-signup):** https://veristrux.com/ue5-doctor-demo.html
 - **Interactive 6-Wall 29-Prime Laguerre Spatial Fiducial Sandbox:** https://veristrux.com/viewdrift-demo.html
