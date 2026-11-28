@@ -3,7 +3,7 @@
 Zero-dependency Python 3.10+ command-line diagnostic suite for **Unreal Engine 5.4 – 5.9** developers and technical artists.
 
 1. **`triage-log <Saved/Logs/Project.log>`** — Scans 100,000+ line UnrealBuildTool (UBT), UnrealAutomationTool (UAT), Cook, and Editor crash logs in `<50 ms`, isolating the **first root-cause error** and mapping `LNK2019`/`LNK2001` unresolved symbols to missing `<Module>.Build.cs` dependencies (`UMG`, `Niagara`, `EnhancedInput`, `StateTreeModule`, `RenderCore`, etc.).
-2. **`audit-ini <Config/DefaultEngine.ini> --vram-gb 16 --mode desktop|vr90`** — Audits renderer settings against `8 GB`–`24 GB` desktop or `90 Hz` OpenXR VR stereo VRAM budgets and outputs ready-to-paste `DefaultEngine.ini` CVar overrides (`r.Streaming.PoolSize`, `r.VSM.MaxPhysicalPages`, `xr.InstancedStereo`, Lumen/Strand caps).
+2. **`audit-ini <Config/DefaultEngine.ini> --vram-gb 16 --mode desktop|vr90`** — Audits renderer settings against `8 GB`–`24 GB` desktop or `90 Hz` OpenXR VR stereo VRAM budgets and outputs ready-to-paste `DefaultEngine.ini` CVar overrides (`r.Streaming.PoolSize`, `r.Shadow.Virtual.MaxPhysicalPages`, `vr.InstancedStereo`, Lumen/Strand caps).
 3. **`trim-uproject <Game.uproject>`** — Flags high-bloat default plugins (`OpenImageDenoise`, `USDImporter`, editor-only leaks) inflating shipping `.pak` / IoStore binaries by `60–200+ MB`.
 4. **`selftest`** — Runs 10 built-in offline verification checks in `<0.1s`.
 
