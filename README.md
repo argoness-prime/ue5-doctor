@@ -18,4 +18,4 @@ python ue5_doctor.py trim-uproject MyProject.uproject
 
 ## License & Support
 - **License:** MIT License — Copyright (c) 2026 Veristrux Inc.
-- **Support & Custom UE5 C++ Rescue:** `argoness@veristrux.com` · https://argoness-prime.github.io/veristrux/
+- **Support & Custom UE5 C++ Rescue:** `argoness@veristrux.com` · https://veristrux.com/
